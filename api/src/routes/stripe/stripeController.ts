@@ -4,11 +4,11 @@ import { db } from '../../db/index.js';
 import { orderItemsTable, ordersTable } from '../../db/ordersSchema.js';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const stripe = new Stripe("helllow");
 const endpointSecret = process.env.STRIPE_ENDPOINT_SECRET!;
 
 export async function getKeys(req: Request, res: Response) {
-  res.json({ publishableKey: process.env.STRIPE_PUBLISHABLE_KEY });
+  res.json({ publishableKey: "hellow" });
 }
 
 export async function createPaymentIntent(req: Request, res: Response) {
